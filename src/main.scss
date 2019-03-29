@@ -1,0 +1,254 @@
+*{
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    /* color: #ADB6C1 */
+    /*color: #9fa8a3;*/
+}
+body{
+    background: #F0F1F5;
+    position: relative;
+}
+#main, #autorization{
+    background: rgb(39, 39, 39);
+    margin: 50px 0 50px 0;
+    width: 600px;
+    border: 1px solid black;
+
+    padding: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-300px);
+}
+#autorization{
+    padding: 15px;
+}
+#main{
+    display: none;
+}
+#userPassword{
+    margin-left: 20px;
+}
+#logInArea{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#autorization{
+    margin-top: 150px;
+    
+    width: 400px;
+    height: 150px;
+    transform: translateX(-200px)
+}
+.todoName, .autorName{
+    vertical-align: top;
+    margin-right: 10px;
+    display: inline-block;
+}
+.autorName{
+    width: 65px;
+}
+.todoName{
+    width: 100px;
+}
+.check{
+    vertical-align: top;
+}
+.descripton{
+    text-align: justify;
+    font-size: 14px;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 325px;
+    overflow: hidden;
+    white-space:nowrap;
+    text-overflow: ellipsis;}
+h1, h2, h5{
+    text-align: center;
+}
+h2,h5{
+    margin: 15px;
+}
+h1{
+    font-size: 27px;
+    margin: 5px 0;
+    color: white
+}
+#search{
+    width: 247px;
+    height: 35px;
+    background: #c5d5cb;
+    border: 0;
+    padding: 0;
+    margin:0 0 15px 176px;
+    display: none
+}
+#input{
+    width: 300px;
+    height: 30px;
+    border: 1px solid black;
+}
+#about {
+    order: 1;
+    width: 564px;
+    margin-top: 20px;
+    height: 100px;
+    background: #c5d5cb;
+}
+#in, #autor{
+    background: #c5d5cb;
+}
+#add, #refreshButton ,#visibleAdd, #userName, #userPassword, #submit, #newUser, #logOutButton, #searchBtn {
+    padding: 5px 10px 5px 10px;
+    background: white;
+    /*height: 30px;*/
+}
+#logOutButton{
+    float: right;
+    border: 0;
+}
+#visibleAdd, .delete, #add, #searchBtn{
+    border: 0;
+}
+#submit, #newUser, #visibleAdd, #logOutButton, #add, #searchBtn {
+    margin-top: 10px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%
+}
+
+#add:hover, #refreshButton:hover{
+    background: #c5d5cb;
+    cursor: pointer;
+}
+button:hover{
+    background: #c5d5cb;
+    cursor: pointer;
+}
+#out{
+    text-align: left;
+}
+/*.checked{*/
+    /*text-decoration: line-through;*/
+/*}*/
+
+.check:checked + .unchecked {
+    text-decoration: line-through;
+}
+
+/*[crossing]{*/
+    /*text-decoration: line-through;*/
+/*}*/
+
+.unchecked:hover{
+    color: #E8EDFF;
+    cursor: pointer;
+}
+
+.delete{
+    height: 25px;
+    width: 25px;
+    background: white;
+    border-radius: 50%;
+    margin-right: 14px;
+    float: right;
+}
+i{
+    color: black;
+}
+.edit, .save{
+    margin: 5px 0 10px 10px;
+    background: #e3e0cf;
+    border-radius: 10px;
+    float: right;
+    width: 34px;
+}
+input{
+    background:  white;
+    text-align: center;
+}
+#inputs{
+    display: none;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    padding-right: 20px;
+    padding-left: 20px;
+    flex-wrap: wrap;
+}
+.searchSection{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+/*.searchSection>input{*/
+    /*margin-right: 30px;*/
+/*}*/
+
+.tg  {border-collapse:collapse;border-spacing:0;border-color:black;width: 100%}
+.tg td{font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;color:black;background-color:#e3e0cf;}
+.tg th{font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;color:#039;background-color:#e3e0cf;}
+.tg .tg-hmp3{background-color: #cac7b6;text-align:center;vertical-align:top}
+.tg .tg-baqh{text-align:center;vertical-align:top}
+.tg .tg-mb3i{background-color:#A3A08F;text-align:right;vertical-align:top}
+.tg .tg-lqy6{text-align:left;vertical-align:top;padding: 0}
+.tg .tg-lqy61{text-align:left;vertical-align:top;padding: 0}
+.tg .tg-0lax{vertical-align:top;padding: 0}
+
+td>textarea{
+    resize: none;
+    border: none;
+    box-sizing: border-box;
+    overflow: auto;
+    background: #e3e0cf;
+}
+.taskNameArrea, .authorNameArrea{
+    width: 75px;
+}
+.descriptonArea{
+    width: 333px;
+    height: 250px;
+    text-align: justify;
+}
+.dateArrea{
+    width: 75px;
+    min-height: 60px;
+}
+
+.moreInfo{
+    display: none;
+    margin:10px;
+}
+
+[visible]{
+    display: block;
+}
+.item{
+    color: white;
+    background: linear-gradient(to right, #30355B, #434987);
+    padding:20px 0 20px 0;
+    margin:10px 10px 10px 10px ;
+    height: fit-content;
+    border: 1px solid black;
+}
+.done{
+    background: linear-gradient(to right, #175844, #36A07C);
+}
+.editTaskTextArea{
+    height: inherit;
+}
+@keyframes colorchange
+{
+  0%   {background: rgb(255, 178, 178);}
+  50%  {background: #e3e0cf;}
+  100% {background: rgb(255, 178, 178);}
+}
+.editableArea{
+    animation: colorchange 3s infinite;
+}
+
+
+/* test checkbox */
+

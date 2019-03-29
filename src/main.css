@@ -1,0 +1,361 @@
+*{
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    /* color: #ADB6C1 */
+    /*color: #9fa8a3;*/
+}
+body{
+    background: rgb(119, 119, 119);
+    position: relative;
+}
+#main, #autorization{
+    background: #E1E8F0;
+    margin: 20px 0 20px 0;
+    width: 600px;
+    border: 1px solid black;
+    padding: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-300px);
+}
+#autorization{
+    padding: 15px;
+}
+#main{
+    display: none;
+}
+#userPassword{
+    margin-left: 30px;
+}
+#logInArea{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: baseline;
+    
+}
+#autorization{
+    margin-top: 150px;
+    
+    width: 400px;
+    height: 150px;
+    transform: translateX(-200px)
+}
+.todoName, .autorName{
+    vertical-align: top;
+    margin-right: 10px;
+    display: inline-block;
+    max-width: 500px;
+    overflow: hidden;
+}
+.autorName{
+    width: 65px;
+}
+.todoName{
+    width: 475px;
+}
+.check{
+    vertical-align: top;
+    margin-left: 12px;
+}
+.descripton{
+    text-align: justify;
+    font-size: 14px;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 325px;
+    overflow: hidden;
+    white-space:nowrap;
+    text-overflow: ellipsis;}
+h1, h2, h5, #currentUser{
+    text-align: center;
+    color: white
+}
+h2,h5{
+    margin: 15px;
+    font-weight: normal;
+}
+h1{
+    font-weight: 200;
+    font-size: 27px;
+    margin: 10px 0;
+    color: black;
+}
+h2{
+    margin-bottom: 0;
+    font-size: 20px;
+    margin-top: 10px;
+    color: black;
+}
+h5{
+    margin-top: 7px;
+}
+#currentUser, h5, #chose{
+    color: black;
+}
+
+#search{
+    width: 247px;
+    height: 35px;
+    background: #c5d5cb;
+    border: 1px solid black;
+    padding: 0;
+    margin:0 0 15px 0px;
+    /* display: none */
+}
+#input{
+    width: 300px;
+    height: 30px;
+    border: 1px solid black;
+}
+#about {
+    order: 1;
+    width: 564px;
+    margin-top: 20px;
+    height: 55px;
+    background: #c5d5cb;
+}
+#in, #autor{
+    background: #c5d5cb;
+}
+#in{
+    height: 29px;
+    margin-top: 10px;
+    width: 500px;
+    border: 0;
+}
+.edit{
+    position: absolute;
+    left: 519px;
+}
+.save{
+    position: absolute;
+    left: 519px;
+    top: 35px;
+}
+#hidenSearch, #hidenAdd{
+    display: none;
+}
+#liveSearch{display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+}
+#add,#visibleAdd, #submit, #newUser, #logOutButton, #searchBtn, #checkedFilter, #uncheckedFilter, .edit, .delete, .save {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    padding: 0;
+    }
+#submit, #newUser{
+    border: 1px solid black;
+}
+#userName, #userPassword{
+    width: 170px;
+    height: 35px;
+    background: #c5d5cb;
+    border: 1px solid black;
+}
+#logOutButton, .date{
+    float: right;
+    border: 0;
+}
+#visibleAdd, .delete, #add, #searchBtn, .edit, .save, .filter, #logOutButton{
+    border: 0.7px solid black;
+}
+#submit, #newUser, #visibleAdd, #logOutButton, #add, #searchBtn {
+    margin-top: 10px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    transition-property: background;
+}
+#add:hover, #refreshButton:hover{
+    background: #c5d5cb;
+    cursor: pointer;
+}
+button:hover{
+    background: #c5d5cb;
+    cursor: pointer;
+}
+#out{
+    text-align: left;
+}
+
+.check:checked + .unchecked {
+    text-decoration: line-through;
+}
+
+.unchecked:hover{
+    color: #E8EDFF;
+    cursor: pointer;
+}
+
+.delete, .edit, .save, .filter{
+    transition-property: background;
+    height: 26px;
+    width: 26px;
+    background: white;
+    border-radius: 50%;
+    margin-right: 14px;
+    float: right;
+}
+i{
+    color: black;
+}
+.edit, .save{
+    margin: 5px 0 10px 10px;
+    
+    float: right;
+    
+}
+input{
+    background:  white;
+    text-align: center;
+}
+#inputs{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    flex-wrap: wrap;
+}
+
+.searchSection{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+td>textarea{
+    resize: none;
+    border: none;
+    box-sizing: border-box;
+    overflow: auto;
+    background: #e3e0cf;
+}
+.taskNameArrea, .authorNameArrea{
+    width: 75px;
+}
+.descriptonArea{
+    /* background: linear-gradient(to right, #30355C, #424783); */
+    background:transparent;
+    border: none;
+    color: white;
+    width: 510px;
+    height: 50px;
+    resize: none;
+    text-align: justify;
+    overflow: hidden;
+}
+.date{
+    margin-right: 55px;
+    font-family: 'Mukta', sans-serif;
+}
+.dateArrea{
+    width: 75px;
+    min-height: 60px;
+}
+
+.moreInfo{
+    position: relative;
+    display: none;
+    margin:10px;
+}
+
+[visible]{
+    display: block;
+}
+.item{
+    color: white;
+    background: #6FD2CF;
+    padding:20px 0 20px 0;
+    margin:10px 10px 10px 10px ;
+    height: fit-content;
+    border: 1px solid black;
+    transition: background 3s linear 1s;
+}
+.done{
+    background: #9268BE;
+    transition: background 3s linear 1s;
+}
+.doneDescription{
+    background: #9268BE;
+}
+.editTaskTextArea{
+    height: inherit;
+}
+@keyframes colorchange
+{
+  0%   {background: #FF0101;}
+  50%  {background: transparent}
+  100% {background: #FF0101;}
+}
+
+.editableArea{
+    animation: colorchange 3s infinite;
+}
+
+.edit>i, .save>i, .delete>i, .filter>i{
+    transition-property: color;
+}
+.edit:hover, .save:hover, .delete:hover,#checkedFilter:hover, #uncheckedFilter:hover, #submit:hover, #newUser:hover, #visibleAdd:hover, #logOutButton:hover, #add:hover, #searchBtn:hover{
+    transition: 1s linear;
+    background:#FF0101
+}
+.edit:hover>i, .save:hover>i, .delete:hover>i,.filter:hover>i, #submit:hover>i, #newUser:hover>i, #visibleAdd:hover>i, #logOutButton:hover>i, #add:hover>i, #searchBtn:hover>i{
+    transition: 1s linear;
+    color: white
+}
+.filter{
+     margin: 0;
+}
+.filter::after{
+    background: #9268BE;
+}
+
+.lds-ring {
+    display: inline-block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    left: 50%;
+    top: 209px;
+    margin-left: -15px;
+    display: none;
+  }
+  .lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 51px;
+    height: 51px;
+    margin: 6px;
+    border: 6px solid #FF0101;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #FF0101 transparent transparent transparent;
+  }
+  .lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+  }
+  .lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+  }
+  .lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+  }
+  @keyframes lds-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+

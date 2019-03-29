@@ -1,0 +1,26 @@
+{
+  "name": "newRx",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --mode development",
+    "scss-build": "node-sass-chokidar -w ./srs/main.scss -o ./scss --usePolling --polling-interval 1000 --output-style expanded"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/jquery": "^3.3.29",
+    "moment": "^2.24.0",
+    "rxjs": "^6.4.0",
+    "ts-loader": "^5.3.3",
+    "typescript": "^3.3.3333",
+    "webpack": "^4.29.6",
+    "webpack-dev-server": "^3.2.1"
+  },
+  "devDependencies": {
+    "stylelint": "^9.10.1",
+    "webpack-cli": "^3.2.3"
+  }
+}
