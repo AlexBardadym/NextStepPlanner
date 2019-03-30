@@ -1,5 +1,4 @@
 localStorage.setItem('userIdCounter', '');
-let userIdCounter = localStorage.getItem('userIdCounter');
 
 interface UserInterface {
     userName: string,
@@ -18,6 +17,4 @@ class User implements UserInterface {
     }
 }
 
-
-
-export { User, userIdCounter };
+export { User };

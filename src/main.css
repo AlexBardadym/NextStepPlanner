@@ -202,13 +202,12 @@ button:hover{
 }
 i{
     color: black;
+    font-size: 16px;
 }
 .edit, .save{
     margin: 5px 0 10px 10px;
-    
     float: right;
-    
-}
+    }
 input{
     background:  white;
     text-align: center;
@@ -222,7 +221,6 @@ input{
     padding-left: 20px;
     flex-wrap: wrap;
 }
-
 .searchSection{
     display: flex;
     justify-content: space-between;
@@ -231,19 +229,10 @@ input{
     padding-right: 20px;
     padding-left: 20px;
 }
-
-td>textarea{
-    resize: none;
-    border: none;
-    box-sizing: border-box;
-    overflow: auto;
-    background: #e3e0cf;
-}
 .taskNameArrea, .authorNameArrea{
     width: 75px;
 }
 .descriptonArea{
-    /* background: linear-gradient(to right, #30355C, #424783); */
     background:transparent;
     border: none;
     color: white;
@@ -261,13 +250,11 @@ td>textarea{
     width: 75px;
     min-height: 60px;
 }
-
 .moreInfo{
     position: relative;
     display: none;
     margin:10px;
 }
-
 [visible]{
     display: block;
 }
@@ -290,13 +277,6 @@ td>textarea{
 .editTaskTextArea{
     height: inherit;
 }
-@keyframes colorchange
-{
-  0%   {background: #FF0101;}
-  50%  {background: transparent}
-  100% {background: #FF0101;}
-}
-
 .editableArea{
     animation: colorchange 3s infinite;
 }
@@ -318,7 +298,6 @@ td>textarea{
 .filter::after{
     background: #9268BE;
 }
-
 .lds-ring {
     display: inline-block;
     position: absolute;
@@ -358,4 +337,10 @@ td>textarea{
       transform: rotate(360deg);
     }
   }
+  @keyframes colorchange
+{
+  0%   {background: #FF0101;}
+  50%  {background: transparent}
+  100% {background: #FF0101;}
+}
 

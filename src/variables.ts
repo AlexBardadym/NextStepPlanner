@@ -1,6 +1,5 @@
 import { makeSubmit, createNewUser, makeLogOut, makeSearchVisible } from './functions';
 
-
 const button = <HTMLElement>document.getElementById('add');
 const input = <HTMLInputElement>document.getElementById('in');
 const list = <HTMLElement>document.getElementById('out');
@@ -30,9 +29,6 @@ searchBtn.addEventListener('click', makeSearchVisible);
 const currentUser = <HTMLElement>document.getElementById('currentUser');
 const ckeckedFilter = document.querySelector('[data-checked]');
 const unckeckedFilter = document.querySelector('[data-unchecked]');
-
-
-
 
 export {
   button, input, list, deleteItem, autor, about, items, check, search, visibleAdd, addArea, editButton,

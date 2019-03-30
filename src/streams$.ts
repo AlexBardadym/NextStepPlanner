@@ -1,13 +1,14 @@
 import { fromEvent } from 'rxjs';
-import { button, check, deleteItem, items, search, visibleAdd, editButton, saveButton, ckeckedFilter, unckeckedFilter } from './variables';
-import { debounceTime, distinctUntilChanged, filter, map, switchMap, tap } from 'rxjs/operators';
+import {
+  button, check, deleteItem, items, search, visibleAdd,
+  editButton, saveButton, ckeckedFilter, unckeckedFilter
+} from './variables';
+import { debounceTime, distinctUntilChanged, map, switchMap } from 'rxjs/operators';
 import { getObj } from './functions';
 import {
-  makeCross, makeDel, makeMoreInfo, addToDo, makeOut, onSuccess, makeAddAreaVisible, editTask, saveChanges,
+  makeCross, makeDel, makeMoreInfo, addToDo, onSuccess, makeAddAreaVisible, editTask, saveChanges,
   makeCkeckedFilter, makeUnCkeckedFilter
 } from './functions';
-
-
 
 const visibleAdd$ = fromEvent(visibleAdd, 'click');
 visibleAdd$.subscribe(makeAddAreaVisible);
@@ -21,10 +22,8 @@ function makeAllStreams() {
     debounceTime(500),
     distinctUntilChanged(),
     map((e: KeyboardEvent) => (<HTMLInputElement>e.target).value),
-    tap(query => console.log('Searching : ', query)),
     switchMap(getObj)
   );
-
   const editButtonClicked$ = fromEvent(editButton, 'click');
   const saveButtonClicked$ = fromEvent(saveButton, 'click');
   const ckeckedFilter$ = fromEvent(ckeckedFilter, 'click');
@@ -35,15 +34,10 @@ function makeAllStreams() {
   del$.subscribe(event => makeDel(event));
   checked$.subscribe(makeCross);
   search$.subscribe(onSuccess);
-
   editButtonClicked$.subscribe(editTask);
   saveButtonClicked$.subscribe(saveChanges);
   ckeckedFilter$.subscribe(makeCkeckedFilter);
   unckeckedFilter$.subscribe(makeUnCkeckedFilter);
 }
 
-
-
-
-// export { todo$, moreInfo$, del$, checked$, search$, visibleAdd$, editButtonClicked$, saveButtonClicked$ };
 export { makeAllStreams };
