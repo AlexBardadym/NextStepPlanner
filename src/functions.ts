@@ -67,6 +67,7 @@ function createNewUser(event: Event) {
     localStorage.setItem('actualId', `${user.id}`);
     localStorage.setItem(`todo${user.id}`, '[]');
     localStorage.setItem('logIn', 'true');
+    currentUser.innerHTML = user.userName;//<=
     $('.lds-ring').hide(100);
     $('#autorization').hide(300);
     $('#main').show(300);
@@ -85,6 +86,7 @@ function makeSubmit(event: Event) {
         localStorage.setItem('actualId', `${users[i].id}`);
         localStorage.setItem('actualUser', `${users[i].userName}`);
         let toDoList = JSON.parse(localStorage.getItem(`todo${users[i].id}`));
+        currentUser.innerHTML = `${users[i].userName}`;//<=
         makeOut(toDoList);
         setTimeout(() => {
           $('#autorization').hide(300);
