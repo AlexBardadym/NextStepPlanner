@@ -12,27 +12,25 @@ let checkedArray: Array<object> = [];
 let user: string = '';
 
 function makeOut(arr: any) {
-  let out: string = ''
-  let counter: number = 0;
+  let out: string = '';
   user = localStorage.getItem('actualUser');
   for (let key in arr) {
     if (arr[key].done === true) {
-      out += `<div class="item done"><input title="done?" class= "check" type= "checkbox" checked data-counter = ${counter}>`;
+      out += `<div class="item done"><input title="done?" class= "check" type= "checkbox" checked>`;
     } else {
-      out += `<div class="item"><input title="done?" class= "check" type= "checkbox" data-counter = ${counter}>`;
+      out += `<div class="item"><input title="done?" class= "check" type= "checkbox">`;
     }
     out += `<span class="unchecked todoName" title="click fo more info">` + arr[key].task + ` </span>
-    <button data-counter=${counter} class="delete" title="Delete this task"><i data-counter=${counter}
-        class="fas fa-trash-alt"></i></button>` +
+    <button class="delete" title="Delete this task"><i class="fas fa-trash-alt"></i></button>` +
+
       `<div class="moreInfo"><button class="edit" title="edit description"><i class="fas fa-pencil-alt"></i></button>
       <button class="save" title="save changes"><i class="far fa-save"></i></button>
-      <textarea data-counter=${counter} id="description" class="descriptonArea editArea"
+      <textarea id="description" class="descriptonArea editArea"
         readonly>${arr[key].about}</textarea>
       <div class="date">${arr[key].date}</div>
     </div>
     </div>`;
     list.innerHTML = out;
-    counter++;
   }
   currentUser.innerHTML = user;
   makeAllStreams();
