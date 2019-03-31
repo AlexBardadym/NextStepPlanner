@@ -67,7 +67,7 @@ function createNewUser(event: Event) {
     localStorage.setItem('actualId', `${user.id}`);
     localStorage.setItem(`todo${user.id}`, '[]');
     localStorage.setItem('logIn', 'true');
-    currentUser.innerHTML = user.userName;//<=
+    currentUser.innerHTML = user.userName;
     $('.lds-ring').hide(100);
     $('#autorization').hide(300);
     $('#main').show(300);
@@ -86,7 +86,7 @@ function makeSubmit(event: Event) {
         localStorage.setItem('actualId', `${users[i].id}`);
         localStorage.setItem('actualUser', `${users[i].userName}`);
         let toDoList = JSON.parse(localStorage.getItem(`todo${users[i].id}`));
-        currentUser.innerHTML = `${users[i].userName}`;//<=
+        currentUser.innerHTML = `${users[i].userName}`;
         makeOut(toDoList);
         setTimeout(() => {
           $('#autorization').hide(300);
@@ -222,40 +222,18 @@ function makeMoreInfo(event: any) {
   }
 }
 
-function makeOutFiltered(arr: any) {
-  let out: string = '';
-  user = localStorage.getItem('actualUser');
-  for (let key in arr) {
-    if (arr[key].done === true) {
-      out += `<div class="item done" style = "
-    padding-left: 25px;"><input title="done?" class= "check" type= "checkbox" onclick="return false;" checked>`;
-    } else {
-      out += `<div class="item" style = "
-    padding-left: 25px;"><input title="done?" class= "check" type= "checkbox" onclick="return false;">`;
-    }
-    out += `<span class="unchecked todoName" title="click fo more info">` + arr[key].task + ` </span>` +
-      `<div>
-      <textarea id="description" class="descriptonArea editArea" readonly>${arr[key].about}</textarea>
-      <div class="date">${arr[key].date}</div>
-    </div>
-    </div>`;
-    list.innerHTML = out;
-  }
-  currentUser.innerHTML = user;
-}
-
 function makeCkeckedFilter() {
   let actualId = localStorage.getItem('actualId');
   let toDoList = JSON.parse(localStorage.getItem(`todo${actualId}`));
   checkedArray = toDoList.filter((el: any) => el.done === true);
-  makeOutFiltered(checkedArray);
+  makeOut(checkedArray);
 }
 
 function makeUnCkeckedFilter() {
   let actualId = localStorage.getItem('actualId');
   let toDoList = JSON.parse(localStorage.getItem(`todo${actualId}`));
   unCheckedArray = toDoList.filter((el: any) => el.done === false);
-  makeOutFiltered(unCheckedArray);
+  makeOut(unCheckedArray);
 }
 
 export {
